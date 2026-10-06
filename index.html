@@ -6,6 +6,10 @@
 <title>Joh Layson</title>
 <meta name="description" content="Joh Layson: who I am, what I do and what I'm thinking about.">
 <meta name="theme-color" content="#000000">
+<script>
+  // Old business links that pre-filled the preview form (/?package=... and /?checks=...) now go to the business site
+  if (/[?&](package|checks)=/.test(location.search)) location.replace('https://website.johlayson.com/' + location.search + location.hash);
+</script>
 <link rel="canonical" href="https://johlayson.com/">
 <meta property="og:title" content="Joh Layson">
 <meta property="og:description" content="Who I am, what I do and what I'm thinking about.">
@@ -20,7 +24,7 @@
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400,500,501&f[]=satoshi@400,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=14">
+<link rel="stylesheet" href="/assets/style.css?v=15">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Joh Layson","url":"https://johlayson.com/","email":"joh@johlayson.com","sameAs":["https://www.linkedin.com/in/johlayson","https://www.instagram.com/johlayson","https://www.facebook.com/johlayson"]}
 </script>
