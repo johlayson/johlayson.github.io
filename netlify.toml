@@ -1,0 +1,73 @@
+# Netlify settings for johlayson.com (personal site, since 2026-10-06)
+# Plain HTML: no build step, publish this folder as-is.
+# The old business pages now live at website.johlayson.com, so old links are sent there.
+[build]
+  publish = "."
+
+# Old homepage links that pre-filled the preview form
+[[redirects]]
+  from = "/"
+  query = {package = ":package"}
+  to = "https://website.johlayson.com/?package=:package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/"
+  query = {checks = ":checks"}
+  to = "https://website.johlayson.com/?checks=:checks"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages/*"
+  to = "https://website.johlayson.com/packages/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/check/*"
+  to = "https://website.johlayson.com/check/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq/*"
+  to = "https://website.johlayson.com/faq/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/experience/*"
+  to = "https://website.johlayson.com/experience/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/examples/*"
+  to = "https://website.johlayson.com/examples/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/start/*"
+  to = "https://website.johlayson.com/start/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/me/*"
+  to = "https://website.johlayson.com/me/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
